@@ -1,0 +1,78 @@
+/* Remove body styles if they are already handled globally */
+/* body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333;
+} */
+
+.rotating-button { /* Changed selector from .rotating-button-link to .rotating-button */
+    position: relative;
+    width: 120px;
+    height: 40px;
+    transition: transform 1.8s ease-in-out;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateX(0deg);
+
+    /* --- New styles for button tag --- */
+    border: none; /* Remove default button border */
+    padding: 0; /* Remove default button padding */
+    background: none; /* Remove default button background */
+    cursor: pointer; /* Indicate it's clickable */
+    outline: none; /* Remove outline on focus if desired, but consider accessibility */
+    -webkit-appearance: none; /* For Safari/Chrome to reset default button styles */
+    -moz-appearance: none;    /* For Firefox to reset default button styles */
+    /* --- End new styles for button tag --- */
+
+    display: block; /* Ensure the button behaves like a block for sizing */
+}
+
+.rotating-button:hover { /* Changed selector */
+    transform: perspective(1000px) rotateX(360deg);
+}
+
+.rotating-button span { /* Changed selector */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    box-shadow: inset 0 20px 50px rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+}
+
+.rotating-button:hover span { /* Changed selector */
+    color: #fff;
+    background: rgba(3, 169, 244, 0.8);
+}
+
+.rotating-button span:nth-child(1) { /* Changed selector */
+    transform: rotateX(0deg) translateZ(25px);
+}
+
+.rotating-button span:nth-child(2) { /* Changed selector */
+    transform: rotateX(90deg) translateZ(25px);
+}
+
+.rotating-button span:nth-child(3) { /* Changed selector */
+    transform: rotateX(180deg) translateZ(25px);
+}
+
+.rotating-button span:nth-child(4) { /* Changed selector */
+    transform: rotateX(270deg) translateZ(25px);
+}

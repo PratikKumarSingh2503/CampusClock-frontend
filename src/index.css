@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;700&family=Merriweather:wght@300;400;700&family=Merienda:wght@400;700&family=Merienda+One:wght@400;700&family=Montserrat:wght@400;700&family=Nunito:wght@400;700&display=swap");
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  background-color: #f8fafc;
+  color: #262220;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark body {
+  background-color: #1e293b;
+  color: #f8fafc;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@theme {
+  --drop-shadow-xl: 2px 2px 2px #bacec1;
+  --color-theme: #8274d2;
+  --shadow-xl: 2px 2px 4px;
+  --shadow-lg: 1px 1px 2px #bacec1;
+  --color-myblue: #1570ef;
+  --color-myorange: #e19133;
+  --color-myred: #f36960;
+  /* --color-card: #E7E5FF; */
+  --font-heading1: Merriweather Sans;
+  --font-heading2: Merienda;
+  --font-headingp1: Merienda One;
+  --font-headingp2: Montserrat;
+  --font-headingp3: Nunito;
+  --color-color1: #f6f4e8;
+  --color-color2: #bacec1;
+  --color-hovercolor2: rgb(160, 174, 165);
+  --color-color3: #e59560;
+  --color-color4: #1d3124;
+  --color-dcolor1: #f8fafc;
+  --color-dcolor2: #1e293b;
+  --color-dcolor3: #0f172a;
+}
+.rbc-today {
+  background-color: rgba(186, 206, 193, 0.8) !important; /* Tailwind red-500 */
+}
+
+.rbc-off-range-bg {
+  background-color: rgba(186, 206, 193, 0.5) !important; /* Tailwind gray-50 */
+}
+.rbc-off-range {
+  color: rgb(47, 47, 47) !important;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(137, 137, 137);
+  border-radius: 5px;
+}
